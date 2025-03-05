@@ -78,6 +78,7 @@ This is done using pyspark
 | **5. Optimizing Output** | Coalesces data, partitions by `region`, and saves as **Parquet** in **S3**. |
 
 ## ETL Design
+![alt text](<ETL job.png>)
 
 - I created two tables: **Statistics** and **Statistics Reference Data** after cleaning and processing the data.
 - I designed an **ETL pipeline** using AWS Glue to join both tables via an **inner join**.
