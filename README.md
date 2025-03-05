@@ -45,7 +45,6 @@ I use AWS Glue to crawl and extract metadata from JSON files. IAM roles required
 
 ## Data Cleaning Process
 
-![Data Cleaning](attachment:31f19db7-ff35-4c2d-bb60-29091f2987f7:image.png)
 
 - **Convert JSON files to column and row format (Apache Parquet)**.
 - **Normalize nested JSON fields** to extract relevant data.
@@ -66,7 +65,9 @@ I use AWS Glue to crawl and extract metadata from JSON files. IAM roles required
 - **AmazonS3FullAccess**: Grants full access to Amazon S3.
 - **AWSGlueServiceRole**: Provides AWS Glue with necessary permissions.
 
-## Preprocessing Steps
+## Preprocessing Steps 
+
+This is done using pyspark
 
 | Step | Description |
 | --- | --- |
@@ -78,20 +79,22 @@ I use AWS Glue to crawl and extract metadata from JSON files. IAM roles required
 
 ## ETL Design
 
-- I created two tables: **Statistics** and **Statistics Reference Data**.
+- I created two tables: **Statistics** and **Statistics Reference Data** after cleaning and processing the data.
 - I designed an **ETL pipeline** using AWS Glue to join both tables via an **inner join**.
 - The final processed data is stored in a **new S3 bucket** and an **analytics database**.
 
-### Cleansed vs. Analytics Layer
-
-| Layer | Purpose |
-| --- | --- |
-| **Cleansed Layer** | Stores cleaned data; requires joins for analysis. |
-| **Analytics Layer** | Pre-aggregated tables optimized for queries. |
-
-## Dashboard Visualizations
-
-I use the final processed dataset to create dashboards and visualizations, providing actionable insights for decision-making.
+## Analytics and Visualizations
 
 [text](Analytics_visualizations.pdf)
 
+I built a dashboard using **AWS QuickSight** to analyze YouTube video trends. The key insights include:
+
+1. **Count of Likes and Dislikes by Video Title**: This visualization helps assess audience engagement by comparing the number of likes and dislikes on different videos. It highlights which videos received positive or negative reactions.
+
+2. **Sum of Views by Video Category**: This visualization aggregates video views by category (e.g., Music, Entertainment, Gaming) to identify the most popular content genres on YouTube. It provides insights into where advertisers should focus their efforts.
+
+3. **Trends in Comment Count, Views, and Likes**: This visualization tracks user engagement trends over time by analyzing the correlation between views, likes, and comments. It helps understand audience interaction patterns and the types of videos that generate more discussions.
+
+4. **Views Over Time by Region**: This visualization shows the distribution of video views across different regions (e.g., US, UK, Canada) over time. It provides insights into regional content consumption trends and helps in optimizing ad targeting strategies.
+
+These visualizations help in identifying factors affecting video popularity and refining ad campaign strategies.
