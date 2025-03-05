@@ -99,3 +99,6 @@ I built a dashboard using **AWS QuickSight** to analyze YouTube video trends. Th
 4. **Views Over Time by Region**: This visualization shows the distribution of video views across different regions (e.g., US, UK, Canada) over time. It provides insights into regional content consumption trends and helps in optimizing ad targeting strategies.
 
 These visualizations help in identifying factors affecting video popularity and refining ad campaign strategies.
+
+## Acknowledgments
+- Special thanks to [@darshilparmar](https://github.com/darshilparmar) for this project.
