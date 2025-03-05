@@ -29,14 +29,7 @@ For this project, I used the following technologies:
 
 
 ## Project Architecture
-
-
-
-### AWS Glue Catalog
-
-![AWS Glue Catalog](attachment:123d7097-951f-406d-939a-9d60dac697db:image.png)
-
-I use AWS Glue to discover data and store metadata, serving as a **central metadata repository**.
+![alt text](architecture.png)
 
 ### Data Organization
 
@@ -68,7 +61,7 @@ I use AWS Glue to crawl and extract metadata from JSON files. IAM roles required
 6. Registers metadata in **AWS Glue Catalog**.
 7. **Handles errors gracefully**.
 
-### AWS Lambda Permissions
+### AWS Lambda Permissions Needed
 
 - **AmazonS3FullAccess**: Grants full access to Amazon S3.
 - **AWSGlueServiceRole**: Provides AWS Glue with necessary permissions.
@@ -99,4 +92,6 @@ I use AWS Glue to crawl and extract metadata from JSON files. IAM roles required
 ## Dashboard Visualizations
 
 I use the final processed dataset to create dashboards and visualizations, providing actionable insights for decision-making.
+
+[text](Analytics_visualizations.pdf)
 
