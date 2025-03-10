@@ -22,10 +22,10 @@ For this project, I used the following technologies:
 
 - **Python**: For data processing and scripting.
 - **PySpark**: To process large datasets efficiently.
-- **AWS Glue**: For ETL automation and metadata management.
 - **ETL Pipelines**: To extract, transform, and load data seamlessly.
 - **Cloud Storage (S3)**: To store raw, cleansed, and processed data.
 - **SQL**: For querying and transforming data in the analytics layer.
+- **AWS Services**: Athena, Glue, Redshift, S3, IAM, Lambda, Quicksight.
 
 
 ## Project Architecture
